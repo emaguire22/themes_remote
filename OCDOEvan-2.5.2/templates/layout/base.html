@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{ locale_name }}">
+    <head>
+        <title>{{ head.title }}</title>
+        {{{ resourceHints }}}
+        {{{ head.meta_tags }}}
+        {{{ head.config }}}
+        {{#block "head"}} {{/block}}
+
+        <link href="{{ head.favicon }}" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+        <script>
+            // Change document class from no-js to js so we can detect this in css
+            document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+        </script>
+
+        {{ getFontsCollection }}
+        {{{stylesheet '/assets/css/theme.css'}}}
+
+        {{{head.scripts}}}
+        {{{head.rsslinks}}}
+
+        {{inject 'themeSettings' theme_settings}}
+        {{inject 'genericError' (lang 'common.generic_error')}}
+        {{inject 'maintenanceMode' settings.maintenance}}
+        {{inject 'urls' urls}}
+        {{inject 'template' template}}
+        {{{snippet 'htmlhead'}}}
+        <meta name="google-site-verification" content="H1quKkWRRR_7KeMy5nl4sYVITYk2yMW2X0xp7_4Hdns" />
+        <!--GooGhywoiu9839t543j0s7543uw1.  Please add evan.m.maguire@gmail.com to GA account UA-125258402-1with “Manage Users and Edit” permissions - date 10/29/2020.-->
+    </head>
+    <body>
+        {{{snippet 'header'}}}
+        <svg data-src="{{cdn 'img/icon-sprite.svg'}}" class="icons-svg-sprite"></svg>
+
+        {{#if settings.privacy_cookie}}
+            {{> components/common/cookie}}
+        {{/if}}
+
+        {{> components/common/header }}
+        {{> components/common/body }}
+        {{> components/common/footer }}
+
+        <script>window.__webpack_public_path__ = "{{cdn 'assets/dist/'}}";</script>
+        <script src="{{cdn 'assets/dist/theme-bundle.main.js'}}"></script>
+
+
+        <script>
+            // Exported in app.js
+            window.stencilBootstrap("{{page_type}}", {{jsContext}}).load();
+        </script>
+
+        {{{footer.scripts}}}
+        {{{snippet 'footer'}}}
+
+
+        <a href="https://pcserver.ocdo.us/form.php" id="open-form" class="popup-form">Request A <strong>Free Quote</strong></a>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+        <script>
+            jQuery(document).ready(function(){
+                $('.logo-scroller').slick({
+                  infinite: true,
+                  slidesToShow: 7,
+                  slidesToScroll: 1,
+                  autoplay: true,
+                    autoplaySpeed: 2000,
+                    responsive: [
+                        {
+                          breakpoint: 768,
+                          settings: {
+                           slidesToShow: 3
+                          }
+                        },
+                        {
+                          breakpoint: 480,
+                          settings: {
+                            slidesToShow: 1
+                          }
+                        }
+                      ]
+                });
+                $('.testimonial_scroller').slick({
+                  infinite: true,
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  autoplay: true,
+                    autoplaySpeed: 3000,
+                    nextArrow:jQuery('.pnext'),
+                    prevArrow:jQuery('.pprev')
+                });
+            })
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
+        <script>
+            jQuery(document).ready(function(){
+                jQuery('h4.card-title').matchHeight();
+                jQuery('.card-figure').matchHeight();
+                jQuery('.card-price').matchHeight();
+            })
+        </script>
+
+                <script>
+            (function($) {
+            	$.fn.vmenuModule = function(option) {
+            		var obj,
+            			item;
+            		var options = $.extend({
+            				Speed: 220,
+            				autostart: true,
+            				autohide: 1
+            			},
+            			option);
+            		obj = $(this);
+
+            		item = obj.find("ul").parent("li").children("a");
+            		item.attr("data-option", "off");
+
+            		item.unbind('click').on("click", function( event ) {
+            		    event.preventDefault();
+            			var a = $(this);
+            			if (options.autohide) {
+            				a.parent().parent().find("a[data-option='on']").parent("li").children("ul").slideUp(options.Speed / 1.2,
+            					function() {
+            						$(this).parent("li").children("a").attr("data-option", "off");
+            					})
+            			}
+            			if (a.attr("data-option") == "off") {
+            				a.parent("li").children("ul").slideDown(options.Speed,
+            					function() {
+            						a.attr("data-option", "on");
+            					});
+            			}
+            			if (a.attr("data-option") == "on") {
+            				a.attr("data-option", "off");
+            				a.parent("li").children("ul").slideUp(options.Speed)
+            			}
+            		});
+            		if (options.autostart) {
+            			obj.find("a").each(function() {
+
+            				$(this).parent("li").parent("ul").slideDown(options.Speed,
+            					function() {
+            						$(this).parent("li").children("a").attr("data-option", "on");
+            					})
+            			})
+            		}
+
+            	}
+            })(window.jQuery || window.Zepto);
+        </script>
+
+        <script>
+            jQuery(document).ready(function(){
+                jQuery(".u-vmenu").vmenuModule({ Speed: 200, autostart: false, autohide: true });
+                jQuery('.u-vmenu > ul > li > a').click(function(){
+                    jQuery(this).parent().siblings().removeClass('sactive');
+                })
+            })
+
+            $(document).ready(function() {
+            	$('.popup-youtube, .popup-vimeo, .popup-gmaps, .popup-form').magnificPopup({
+            		disableOn: 700,
+            		type: 'iframe',
+            		mainClass: 'mfp-fade',
+            		removalDelay: 160,
+            		preloader: false,
+
+            		fixedContentPos: false
+            	});
+            });
+
+        </script>
+
+
+
+
+
+    </body>
+</html>

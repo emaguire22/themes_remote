@@ -1,0 +1,212 @@
+---
+products:
+    new:
+        limit: {{theme_settings.homepage_new_products_count}}
+    featured:
+        limit: {{theme_settings.homepage_featured_products_count}}
+    top_sellers:
+        limit: {{theme_settings.homepage_top_products_count}}
+carousel: {{theme_settings.homepage_show_carousel}}
+blog:
+    recent_posts:
+        limit: {{theme_settings.homepage_blog_posts_count}}
+---
+{{#partial "hero"}}
+    {{#if carousel}}
+        {{> components/carousel arrows=theme_settings.homepage_show_carousel_arrows}}
+        <div class="mobileBanner"><a href=""><img src="https://cdn11.bigcommerce.com/s-3l8u8lnxrt/product_images/uploaded_images/mobilebanner.jpg" /></a></div>
+    {{/if}}
+    {{{snippet 'home_content'}}}
+
+
+    <div class="mainCategories">
+        <div class="mainCategory_inner">
+            <div class="mainCategory_item">
+                <div class="mainCategory_box">
+                    <a href="https://pcserverandparts.com/workstations/dell/">
+                        <img src="/product_images/uploaded_images/asset-03.jpg?t=1539858939"/>
+                        <hr/>
+                        <strong>Dell Workstations</strong>
+                        <small>Custom Build Online</small>
+                        <span>Shop Now <i class="fa fa-shopping-cart"></i></span>
+                    </a>
+                </div>
+            </div>
+            <div class="mainCategory_item">
+                <div class="mainCategory_box">
+                    <a href="https://pcserverandparts.com/servers/dell-servers-1/">
+                        <img src="/product_images/uploaded_images/asset-05.jpg?t=1539858939"/>
+                        <hr/>
+                        <strong>Dell Servers</strong>
+                        <small>Custom Build Online</small>
+                        <span>Shop Now <i class="fa fa-shopping-cart"></i></span>
+                    </a>
+                </div>
+            </div>
+            <div class="mainCategory_item">
+                <div class="mainCategory_box">
+                    <a href="https://pcserverandparts.com/workstations/hp-workstations-1/">
+                        <img src="/product_images/uploaded_images/asset-07.jpg?t=1539858939"/>
+                        <hr/>
+                        <strong>HP Workstations</strong>
+                        <small>Custom Build Online</small>
+                        <span>Shop Now <i class="fa fa-shopping-cart"></i></span>
+                    </a>
+                </div>
+            </div>
+            <div class="mainCategory_item">
+                <div class="mainCategory_box">
+                    <a href="https://pcserverandparts.com/servers/hp-servers/">
+                        <img src="/product_images/uploaded_images/asset-09.jpg?t=1539858939"/>
+                        <hr/>
+                        <strong>HP Proliant Servers</strong>
+                        <small>Custom Build Online</small>
+                        <span>Shop Now <i class="fa fa-shopping-cart"></i></span>
+                    </a>
+                </div>
+            </div>
+            <div class="mainCategory_item">
+                <div class="mainCategory_box">
+                    <a href="https://pcserverandparts.com/cpu/">
+                        <img src="/product_images/uploaded_images/asset-15.jpg?t=1539858939"/>
+                        <hr/>
+                        <strong>Processors</strong>
+                        <small></small>
+                        <span>Shop Now <i class="fa fa-shopping-cart"></i></span>
+                    </a>
+                </div>
+            </div>
+            <div class="mainCategory_item">
+                <div class="mainCategory_box">
+                    <a href="https://pcserverandparts.com/ram/">
+                        <img src="/product_images/uploaded_images/asset-16.jpg?t=1539858939"/>
+                        <hr/>
+                        <strong>RAM</strong>
+                        <small></small>
+                        <span>Shop Now <i class="fa fa-shopping-cart"></i></span>
+                    </a>
+                </div>
+            </div>
+            <div class="mainCategory_item">
+                <div class="mainCategory_box">
+                    <a href="https://pcserverandparts.com/hard-drives/">
+                        <img src="/product_images/uploaded_images/asset-17.jpg?t=1539858939"/>
+                        <hr/>
+                        <strong>Hard Drives</strong>
+                        <small></small>
+                        <span>Shop Now <i class="fa fa-shopping-cart"></i></span>
+                    </a>
+                </div>
+            </div>
+            <div class="mainCategory_item">
+                <div class="mainCategory_box">
+                    <a href="https://pcserverandparts.com/cards/">
+                        <img src="/product_images/uploaded_images/asset-18.jpg?t=1539858939"/>
+                        <hr/>
+                        <strong>Cards</strong>
+                        <small></small>
+                        <span>Shop Now <i class="fa fa-shopping-cart"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="why_section">
+        <div class="container">
+            <h2><span>Why</span> <img src="/product_images/uploaded_images/title.png" alt="PCSERVER&PARTS"/></h2>
+            <p><strong>PC SERVER & PARTS</strong> IS A LEADING <strong>IT HARDWARE</strong> SERVICE PROVIDER</p>
+            <div class="grid">
+                <div class="grid__item one-half">
+                    <ul class="listed">
+                        <li>We specialize in providing a Full Service IT Hardware Solution to allow your company to focus on what you do best.</li>
+                        <li>We offer Custom Configured IT Hardware at affordable prices (up to 80-90% off New) to help stretch your IT Budget further.</li>
+                        <li>Custom Software Solutions</li>
+                        <li>Installation, Maintenance and Support Packages Available</li>
+                    </ul>
+                </div>
+                <div class="grid__item one-half">
+                    <ul class="listed">
+                        <li>Emergency Same Day Shipping</li>
+                        <li>We offer Industry Compliant IT Recycling and Industry Compliant Data Security Services to keep your company safe from the risks associated with the improper disposal of IT Assets.</li>
+                        <li>We offer Value Recovery Services to help you get the most out of your obsolete IT Hardware to help offset the cost of newer technology.</li>
+                        <li>Make sure you are doing what’s right with your IT Hardware! Choose PCSP to be your trusted advisor!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="partners">
+
+            <div class="logo-scroller">
+                <div class="logo-item"><div class="logo-box"><a href="https://sustainableelectronics.org/r2-standard"><img src="/product_images/uploaded_images/1.png"/></a></div></div>
+                <div class="logo-item"><div class="logo-box"><img src="/product_images/uploaded_images/3.png"/></div></div>
+                <div class="logo-item"><div class="logo-box"><img src="/product_images/uploaded_images/4.png"/></div></div>
+                <div class="logo-item"><div class="logo-box"><img src="/product_images/uploaded_images/5.png"/></div></div>
+                <div class="logo-item"><div class="logo-box"><img src="/product_images/uploaded_images/6.png"/></div></div>
+                <div class="logo-item"><div class="logo-box"><img src="/product_images/uploaded_images/8.png"/></div></div>
+                <div class="logo-item"><div class="logo-box"><img src="/product_images/uploaded_images/7.png"/></div></div>
+                <div class="logo-item"><div class="logo-box"><a href="https://sustainableelectronics.org/r2-standard"><img src="/product_images/uploaded_images/1.png"/></a></div></div>
+                <div class="logo-item"><div class="logo-box"><img src="/product_images/uploaded_images/3.png"/></div></div>
+                <div class="logo-item"><div class="logo-box"><img src="/product_images/uploaded_images/4.png"/></div></div>
+                <div class="logo-item"><div class="logo-box"><img src="/product_images/uploaded_images/5.png"/></div></div>
+                <div class="logo-item"><div class="logo-box"><img src="/product_images/uploaded_images/6.png"/></div></div>
+                <div class="logo-item"><div class="logo-box"><img src="/product_images/uploaded_images/8.png"/></div></div>
+                <div class="logo-item"><div class="logo-box"><img src="/product_images/uploaded_images/7.png"/></div></div>
+            </div>
+
+    </div>
+
+
+    <div class="testimonials">
+        <div class="container">
+            <div class="testimonial_scroller">
+                <div class="testimonial_item"><p>This company is awesome. Built my box exactly how I wanted it. I'm running Windows 20016 on a HP DL380 G6 on it. Packed perfectly Shipping was great too. I will be buying from them again and again. Saved me thousands of $$$$. Answered all of my questions right away too. I wish other companies would follow suit. Now i'm looking for some used Meraki equipment.</p></div>
+                <div class="testimonial_item"><p>It feels weird to write a five star review about used/refurb hardware, but these guys are doing everything right: the price made the decision easy, the goods showed up exactly as advertised and the shipping was unexpectedly rapid (i.e. the thing showed up before it was due).</p></div>
+                <div class="testimonial_item"><p>These guys were fantastic, I ordered a computer from them - amazing price, they threw in a Quadro board for free, they answered all my questions and they shipped it fast. Best of all they know how to package a computer and it arrived on time, undamaged and it's up and running right now writing this review. I could not be more happy from a seller and I would highly recommend them to anyone.</p></div>
+                <div class="testimonial_item"><p>Straight Up, High Class Retailer! Very respectful, honest with excellent response and attention towards full satisfaction for the customer! I waited a month to rate this product and I must say that I am fully satisfied with this product and the full service care! I would absolutely buy from this vendor again! Thank you to PC Server & Parts!!!</p></div>
+                <div class="testimonial_item"><p>Product arrived promptly and was exactly as advertised. Item was a refurb, as advertised, but was immaculately cleaned such that you could convince me it was new. Packaging was ample to protect the item, without raising any concerns from me. Overall, pleasantly surprised and very happy. Will not hesitate to do business with them again.</p></div>
+                <div class="testimonial_item"><p>This is my first amazon review even though I purchase a lot of things on amazon.PC Server & Parts exceeded my expectation.First my MSA arrived ahead of schedule which is always appreciated.The packing of the MSA was professional grade!The MSA looks brand new.They provided all bay trays and every accessory even the small things like including power cords.Bottom line They Rocked the entire process!!</p></div>
+            </div>
+            <div class="navBtn">
+
+                    <div class="pprev fa fa-arrow-left"></div>
+                    <div class="pnext fa fa-arrow-right"></div>
+            </div>
+        </div>
+    </div>
+
+{{/partial}}
+
+
+
+
+{{#partial "page"}}
+
+    {{#each shipping_messages}}
+        {{> components/common/alert-info message}}
+    {{/each}}
+
+<div class="main full">
+    {{#if products.featured}}
+        {{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
+    {{/if}}
+
+    {{#if products.top_sellers}}
+        {{> components/products/top products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
+    {{/if}}
+
+    {{#if products.new}}
+        {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
+    {{/if}}
+
+    <script>
+        document.body.classList.add("home");
+    </script>
+
+</div>
+{{/partial}}
+{{> layout/base}}

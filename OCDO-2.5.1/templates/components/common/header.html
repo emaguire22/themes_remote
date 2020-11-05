@@ -1,0 +1,63 @@
+{{#if banners.top}}
+<div class="banners" data-banner-location="top">
+    <div class="banner">
+        {{{limit banners.top 1}}}
+    </div>
+</div>
+{{/if}}
+
+<div class="topBar">
+    <div class="container">
+        <ul class="linkLeft">
+            <li><a href="/shipping-information/">SHIPPING</a></li>
+            <li><a href="/warranty/">WARRANTY</a></li>
+            <li><a href="/contact-us/">contact us</a></li>
+            <li><a href="/faq/">faq</a></li>
+            <li><a href="/troubleshooting/">technical issues</a></li>
+        </ul>
+        
+        
+        {{> components/common/navigation}}
+        
+        
+    </div>
+</div>
+
+<header class="header" role="banner">
+    
+    
+    <div class="logo-search container">
+
+    {{#if page_type '===' 'default'}}
+        <h1 class="header-logo header-logo--{{theme_settings.logo-position}}">
+            {{> components/common/store-logo}}
+        </h1>
+    {{else}}
+        <div class="header-logo header-logo--{{theme_settings.logo-position}}">
+            {{> components/common/store-logo}}
+        </div>
+    {{/if}}
+    
+    {{> components/common/search-box}}
+    
+    </div>
+    
+    {{{region name="header_bottom"}}}
+    
+    <div class="mobile-navigation container">
+        <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
+            <span class="mobileMenu-toggleIcon"> </span><span class="menuText">MENU</span>
+        </a>
+        <a href="/cart.php" id="mobileCarte">
+            <i class="fa fa-shopping-cart"></i> <span class="cart-quantity">{{cart.quantity}} Item(s), {{cart.sub_total.formatted}}</span>
+        </a>
+    </div>
+    
+    
+    
+    <div class="container" id="menu" data-menu>
+        
+        {{> components/common/navigation-menu}}
+    </div>
+</header>
+ 

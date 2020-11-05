@@ -1,0 +1,11 @@
+{
+  "customLayouts": {
+    "brand": {},
+    "category": {},
+    "page": {},
+    "product": {}
+  },
+  "normalStoreUrl": "https://pcserverandparts.com/",
+  "accessToken": "fkkkb4xb6jteblmfomqokaylzn0me09",
+  "port": "3000"
+}

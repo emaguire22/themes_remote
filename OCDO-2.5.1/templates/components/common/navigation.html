@@ -1,0 +1,33 @@
+
+    <ul class="navUser-section navUser-section--alt">
+        <li class="navUser-item">
+            <a class="navUser-action" href="/account.php">My Account</a>
+        </li>
+        <li class="navUser-item">
+            <a class="navUser-action" href="/orderstatus.php">Order Status</a>
+        </li>
+        <li class="navUser-item navUser-item--account">
+            {{#if customer}}
+                <a class="navUser-action" href="{{urls.account.index}}">{{lang 'common.account'}}</a>
+                <a class="navUser-action" href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a>
+            {{else}}
+                <a class="navUser-action" href="{{urls.auth.login}}">{{lang 'common.login'}}</a>
+                {{#if settings.account_creation_enabled}}
+                    <span class="navUser-or">{{lang 'common.or'}}</span> <a class="navUser-action" href="{{urls.auth.create_account}}">{{lang 'common.sign_up'}}</a>
+                {{/if}}
+            {{/if}}
+        </li>
+        <li class="navUser-item navUser-item--cart">
+            <a
+                class="navUser-action"
+                data-cart-preview
+                data-dropdown="cart-preview-dropdown"
+                data-options="align:right"
+                href="{{urls.cart}}">
+                <span class="cart-quantity">{{cart.quantity}} Item(s), {{cart.sub_total.formatted}}</span>
+            </a>
+
+            <div class="dropdown-menu" id="cart-preview-dropdown" data-dropdown-content aria-hidden="true"></div>
+        </li>
+    </ul>
+
